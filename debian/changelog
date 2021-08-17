@@ -1,0 +1,5 @@
+pi-top-os-archive-keyring (1.0.0) bullseye; urgency=medium
+
+  * Initial release
+
+ -- pi-top <deb-maintainers@pi-top.com>  Fri, 23 Jul 2021 11:50:00 +0100
