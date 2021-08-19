@@ -51,6 +51,7 @@ jobs:
       - name: Build Debian package
         uses: pi-top/debian-package-build-action@add-signing-key
         with:
+          DEBUG: 1
           target_architecture: ${{ env.TARGET_ARCHITECTURE }}
           docker_image: ${{ env.DEB_BUILD_DOCKER_IMAGE }}:${{ env.DEB_BUILD_DOCKER_TAG }}
           signing_key: ${{ secrets.DEB_SIGNING_GPG_KEY }}
