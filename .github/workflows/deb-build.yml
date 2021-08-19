@@ -11,7 +11,6 @@ on:
 env:
   DEB_BUILD_DOCKER_IMAGE: "pitop/pi-top-os-deb-build"
   DEB_BUILD_DOCKER_TAG: "bullseye-add-signing-key"
-  DEB_BUILD_ACTION_REF: "add-signing-key"
   CHANGELOG_AUTHOR_NAME: "pi-top"
   CHANGELOG_AUTHOR_EMAIL: "deb-maintainers@pi-top.com"
   PACKAGECLOUD_REPO: "experimental"
@@ -50,7 +49,7 @@ jobs:
           echo "TARGET_ARCHITECTURE=${target_architecture}" >> $GITHUB_ENV
 
       - name: Build Debian package
-        uses: pi-top/debian-package-build-action@${{ env.DEB_BUILD_ACTION_REF }}
+        uses: pi-top/debian-package-build-action@add-signing-key
         with:
           target_architecture: ${{ env.TARGET_ARCHITECTURE }}
           docker_image: ${{ env.DEB_BUILD_DOCKER_IMAGE }}:${{ env.DEB_BUILD_DOCKER_TAG }}
