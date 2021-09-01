@@ -1,3 +1,11 @@
+pi-top-os-archive-keyring (2021.8.19) bullseye; urgency=medium
+
+  * Initial release: Bullseye (#2)
+  * Updated master workflow files
+  * Updated master workflow files
+
+ -- pi-top <deb-maintainers@pi-top.com>  Wed, 01 Sep 2021 20:47:15 +0000
+
 pi-top-os-archive-keyring (2021.8.18) bullseye; urgency=medium
 
   * Initial release
