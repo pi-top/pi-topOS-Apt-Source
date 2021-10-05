@@ -12,6 +12,6 @@ This repository contains the GnuPG archive keys of the pi-topOS archive, used fo
 ```
 apt update
 apt install -y pi-top-os-archive-keyring
-echo "deb [signed-by=/usr/share/keyrings/pi-top-os-archive-keyring.gpg] https://pkg.pi-top.com/os-release/debian/ bullseye main" > /etc/apt/sources.list.d/pi-top.list
+echo "deb [signed-by=/usr/share/keyrings/pi-top-os-archive-keyring.gpg] deb https://packages.pi-top.com/pi-top-os/debian/ bullseye main" > /etc/apt/sources.list.d/pi-top.list
 apt update
 ```
