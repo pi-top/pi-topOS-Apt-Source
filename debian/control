@@ -11,6 +11,7 @@ Package: pi-top-os-archive-source
 Architecture: all
 Depends:
  ${misc:Depends},
+ pi-top-os-archive-keyring,
 Description: pi-topOS configured APT data source
  This package contains the configured APT data source for the archive
  pi-topOS apt software repository archive.
@@ -19,6 +20,7 @@ Package: pi-top-os-experimental-archive-source
 Architecture: all
 Depends:
  ${misc:Depends},
+ pi-top-os-archive-keyring,
 Description: pi-topOS configured APT data source
  This package contains the configured APT data source for the experimental
  pi-topOS apt software repository archive.
@@ -27,6 +29,7 @@ Package: pi-top-os-unstable-archive-source
 Architecture: all
 Depends:
  ${misc:Depends},
+ pi-top-os-archive-keyring,
 Description: pi-topOS configured APT data source
  This package contains the configured APT data source for the unstable
  pi-topOS apt software repository archive.
@@ -35,6 +38,7 @@ Package: pi-top-os-testing-archive-source
 Architecture: all
 Depends:
  ${misc:Depends},
+ pi-top-os-archive-keyring,
 Description: pi-topOS configured APT data source
  This package contains the configured APT data source for the testing
  pi-topOS apt software repository archive.
