@@ -1,0 +1,1 @@
+deb [signed-by=/usr/share/keyrings/pi-top-os.gpg] https://packages.pi-top.com/pi-top-os/debian/ bullseye main

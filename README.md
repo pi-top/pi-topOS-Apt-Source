@@ -1,17 +1,15 @@
-# pi-topOS Archive Keyring
+# pi-topOS Apt Source: Archive Keyring and Automatic Apt Source Configuration
 
 This repository contains the GnuPG archive keys of the pi-topOS archive, used for signing the releases of pi-topOS apt software repository archives.
 
-## How To Add pi-topOS As A Source
+Packages are provided as a quick way of adding pi-topOS as a source (`pi-top-os-{experimental,unstable,testing,stable}-apt-source`).
 
-* Install this package
-* Add to sources
-
-### Example (RPi OS)
+For example, to add pi-topOS as a fully configured source to Raspberry Pi OS:
 
 ```
 apt update
-apt install -y pi-top-os-archive-keyring
-echo "deb [signed-by=/usr/share/keyrings/pi-top-os-archive-keyring.gpg] deb https://packages.pi-top.com/pi-top-os/debian/ bullseye main" > /etc/apt/sources.list.d/pi-top.list
+apt install -y pi-top-os-apt-source
 apt update
 ```
+
+Note: the apt cache needs updating after the package has been installed, as the packages available in the pi-topOS apt repositories are not yet known.

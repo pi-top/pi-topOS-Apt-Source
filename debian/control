@@ -7,10 +7,46 @@ Build-Depends:
 Standards-Version: 4.5.1
 Homepage: https://pi-top.com/
 
+Package: pi-top-os-apt-source
+Architecture: all
+Depends:
+ ${misc:Depends},
+ pi-top-os-archive-keyring,
+Description: pi-topOS APT source
+ This package contains the APT source for the archive
+ pi-topOS apt software repository archive.
+
+Package: pi-top-os-experimental-apt-source
+Architecture: all
+Depends:
+ ${misc:Depends},
+ pi-top-os-archive-keyring,
+Description: pi-topOS 'experimental' APT source
+ This package contains the APT source for the experimental
+ pi-topOS apt software repository archive.
+
+Package: pi-top-os-unstable-apt-source
+Architecture: all
+Depends:
+ ${misc:Depends},
+ pi-top-os-archive-keyring,
+Description: pi-topOS 'unstable' APT source
+ This package contains the APT source for the unstable
+ pi-topOS apt software repository archive.
+
+Package: pi-top-os-testing-apt-source
+Architecture: all
+Depends:
+ ${misc:Depends},
+ pi-top-os-archive-keyring,
+Description: pi-topOS 'testing' APT source
+ This package contains the APT source for the testing
+ pi-topOS apt software repository archive.
+
 Package: pi-top-os-archive-keyring
 Architecture: all
 Depends:
  ${misc:Depends},
 Description: GnuPG archive keys of the pi-topOS archive
- This package contains the archive keys used for the pi-topOS apt
- software repository archives.
+ This package contains the archive keys used for the pi-topOS apt software
+ repository archives.
