@@ -12,4 +12,9 @@ apt install -y pi-top-os-apt-source
 apt update
 ```
 
+Optionally, you can now install much of pi-topOS:
+```
+apt install pt-os
+```
+
 Note: the apt cache needs updating after the package has been installed, as the packages available in the pi-topOS apt repositories are not yet known.
