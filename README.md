@@ -1,4 +1,4 @@
-# pi-topOS Archive Keyring
+# pi-topOS Apt Source: Archive Keyring and Automatic Apt Source Configuration
 
 This repository contains the GnuPG archive keys of the pi-topOS archive, used for signing the releases of pi-topOS apt software repository archives.
 
