@@ -1,1 +1,1 @@
-pi-top-os-archive-keyring.gpg                  /usr/share/keyrings/
+keys/*                /usr/share/keyrings/
