@@ -1,10 +1,8 @@
-pi-top-os-apt (2021.8.21) bullseye; urgency=medium
-
-  * Updated master workflow files
-  * Add all packagecloud keys
-  * Add sources as separate Debian packages (#6)
+pi-top-os-apt (2021.12.20) bullseye; urgency=medium
   * Update source package name
-  * Add optional pt-os
+  * Add convenience packages for installing apt source
+  * Add all PackageCloud repos to keyring package
+  * Use 'signed-by' syntax in sources list
 
  -- pi-top <deb-maintainers@pi-top.com>  Mon, 20 Dec 2021 13:52:45 +0000
 
