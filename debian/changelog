@@ -1,3 +1,9 @@
+pi-top-os-apt (2021.12.21) bullseye; urgency=medium
+
+  * Release with correctly signed packages
+
+ -- pi-top <deb-maintainers@pi-top.com>  Fri, 07 Jan 2022 13:24:20 +0000
+
 pi-top-os-apt (2021.12.20) bullseye; urgency=medium
   * Update source package name
   * Add convenience packages for installing apt source
