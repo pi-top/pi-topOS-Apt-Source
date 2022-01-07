@@ -1,4 +1,4 @@
-pi-top-os-apt (2021.12.22) bullseye; urgency=medium
+pi-top-os-apt (2022.1.7) bullseye; urgency=medium
 
   * Add signing key and passphrase to deb_release workflow
 
