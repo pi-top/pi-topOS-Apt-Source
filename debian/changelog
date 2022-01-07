@@ -1,6 +1,6 @@
 pi-top-os-apt (2021.12.21) bullseye; urgency=medium
 
-  * Update readme (dummy commit to allow new release with signed packages) (#7)
+  * Release with correctly signed packages
 
  -- pi-top <deb-maintainers@pi-top.com>  Fri, 07 Jan 2022 13:24:20 +0000
 
