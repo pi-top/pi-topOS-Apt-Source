@@ -21,6 +21,9 @@ Architecture: all
 Depends:
  ${misc:Depends},
  pi-top-os-archive-keyring,
+ pi-top-os-unstable-apt-source,
+ pi-top-os-testing-apt-source,
+ pi-top-os-apt-source,
 Description: pi-topOS 'experimental' APT source
  This package contains the APT source for the experimental
  pi-topOS apt software repository archive.
@@ -30,6 +33,8 @@ Architecture: all
 Depends:
  ${misc:Depends},
  pi-top-os-archive-keyring,
+ pi-top-os-testing-apt-source,
+ pi-top-os-apt-source,
 Description: pi-topOS 'unstable' APT source
  This package contains the APT source for the unstable
  pi-topOS apt software repository archive.
@@ -39,6 +44,7 @@ Architecture: all
 Depends:
  ${misc:Depends},
  pi-top-os-archive-keyring,
+ pi-top-os-apt-source,
 Description: pi-topOS 'testing' APT source
  This package contains the APT source for the testing
  pi-topOS apt software repository archive.
