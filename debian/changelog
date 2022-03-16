@@ -1,3 +1,9 @@
+pi-top-os-apt (2022.1.8) bullseye; urgency=medium
+
+  * Non-stable packages depend on more-stable ones (#12)
+
+ -- pi-top <deb-maintainers@pi-top.com>  Tue, 15 Mar 2022 20:15:31 +0000
+
 pi-top-os-apt (2022.1.7) bullseye; urgency=medium
 
   * Add signing key and passphrase to deb_release workflow
