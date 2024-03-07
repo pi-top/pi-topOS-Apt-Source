@@ -1,1 +1,1 @@
-deb [signed-by=/usr/share/keyrings/pi-top-os-experimental.gpg] https://packages.pi-top.com/experimental/debian/ bullseye main
+deb [signed-by=/usr/share/keyrings/pi-top-os-experimental.gpg] https://packages.pi-top.com/experimental/debian/ DEBIAN_DISTRO main
