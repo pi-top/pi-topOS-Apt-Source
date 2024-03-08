@@ -1,0 +1,58 @@
+#!/bin/bash
+
+VALID_REPOS=( "pi-top-os" "pi-top-os-testing" "pi-top-os-unstable" "experimental")
+VALID_DISTROS=( "bookworm" "bullseye")
+
+do_install() {
+    REPO="${1}"
+    DISTRO="${2}"
+
+    BASE_FOLDER="/etc/apt/sources.list.d"
+    OUTPUT_REPO_FILE="${BASE_FOLDER}/${REPO}.list"
+    
+    KEYRING_FILE="${REPO}.gpg"
+    if [ "${REPO}" = "experimental" ]; then
+        KEYRING_FILE="pi-top-os-experimental.gpg"
+    fi
+    KEYRING_FILE="/usr/share/keyrings/${KEYRING_FILE}"
+
+    mkdir -p "${BASE_FOLDER}"
+    echo "deb [signed-by=${KEYRING_FILE}] https://packages.pi-top.com/${REPO}/debian/ ${DISTRO} main" > "${OUTPUT_REPO_FILE}"
+}
+
+usage() {
+    echo "Usage: pi-top-apt-source-manager <install|remove> <apt repository>"
+    echo "Valid apt repositories: pi-top-os, pi-top-os-testing, pi-top-os-unstable, experimental"
+}
+
+main() {    
+    OPERATION="${1}"
+    APT_REPO_NAME="${2}"
+    if [ -z "${APT_REPO_NAME}" ] || [[ ! " ${VALID_REPOS[@]} " =~ " ${APT_REPO_NAME} " ]]; then
+        usage
+        exit 1
+    fi
+    
+    DISTRO="$(lsb_release -cs 2>/dev/null)"
+    if [ -z "${DISTRO}" ] || [[ ! " ${VALID_DISTROS[@]} " =~ " ${DISTRO} " ]]; then
+        echo "Unsupported distro: ${DISTRO} (supported: ${VALID_DISTROS[@]})"
+        exit 1
+    fi
+
+    case "${OPERATION}" in
+        "install")
+            echo "Installing $APT_REPO_NAME"
+            do_install "${APT_REPO_NAME}" "${DISTRO}"
+            ;;
+        "remove")
+            echo "Removing $APT_REPO_NAME"
+            rm -f "/etc/apt/sources.list.d/${APT_REPO_NAME}.list"
+            ;;
+        *)
+            usage
+            exit 1
+            ;;
+    esac
+}
+
+main "$@"
