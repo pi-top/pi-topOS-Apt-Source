@@ -18,6 +18,7 @@ do_install() {
 
     mkdir -p "${BASE_FOLDER}"
     echo "deb [signed-by=${KEYRING_FILE}] https://packages.pi-top.com/${REPO}/debian/ ${DISTRO} main" > "${OUTPUT_REPO_FILE}"
+    echo "Installed $REPO source for $DISTRO in ${OUTPUT_REPO_FILE}"
 }
 
 usage() {

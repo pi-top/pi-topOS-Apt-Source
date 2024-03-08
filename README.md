@@ -30,7 +30,7 @@ cd pi-topOS-Apt-Source
 # Copy keys
 sudo cp keys/* /usr/share/keyrings/
 # Install source by executing the 'pi-top-os-apt-source-manager' script with the repository name
-sudo usr/lib/pi-top-os-apt-source-manager install pi-top-os
+sudo usr/lib/pi-top-os-apt-installer/pi-top-apt-source-manager install pi-top-os
 # Update apt
 sudo apt update
 ```
