@@ -12,8 +12,9 @@ Architecture: all
 Depends:
  ${misc:Depends},
  pi-top-os-archive-keyring,
+ pi-top-os-apt-installer,
 Description: pi-topOS APT source
- This package contains the APT source for the archive
+ This dummy package contains the APT source for the archive
  pi-topOS apt software repository archive.
 
 Package: pi-top-os-experimental-apt-source
@@ -21,11 +22,12 @@ Architecture: all
 Depends:
  ${misc:Depends},
  pi-top-os-archive-keyring,
+ pi-top-os-apt-installer,
  pi-top-os-unstable-apt-source,
  pi-top-os-testing-apt-source,
  pi-top-os-apt-source,
 Description: pi-topOS 'experimental' APT source
- This package contains the APT source for the experimental
+ This dummy package contains the APT source for the experimental
  pi-topOS apt software repository archive.
 
 Package: pi-top-os-unstable-apt-source
@@ -33,10 +35,11 @@ Architecture: all
 Depends:
  ${misc:Depends},
  pi-top-os-archive-keyring,
+ pi-top-os-apt-installer,
  pi-top-os-testing-apt-source,
  pi-top-os-apt-source,
 Description: pi-topOS 'unstable' APT source
- This package contains the APT source for the unstable
+ This dummy package contains the APT source for the unstable
  pi-topOS apt software repository archive.
 
 Package: pi-top-os-testing-apt-source
@@ -44,9 +47,10 @@ Architecture: all
 Depends:
  ${misc:Depends},
  pi-top-os-archive-keyring,
+ pi-top-os-apt-installer,
  pi-top-os-apt-source,
 Description: pi-topOS 'testing' APT source
- This package contains the APT source for the testing
+ This dummy package contains the APT source for the testing
  pi-topOS apt software repository archive.
 
 Package: pi-top-os-archive-keyring
@@ -56,3 +60,11 @@ Depends:
 Description: GnuPG archive keys of the pi-topOS archive
  This package contains the archive keys used for the pi-topOS apt software
  repository archives.
+
+Package: pi-top-os-apt-installer
+Architecture: all
+Depends:
+ ${misc:Depends},
+Description: Helper package to install pi-topOS APT sources
+ This package contains a script used for installing the pi-topOS apt software
+ repositories.

@@ -29,8 +29,8 @@ git clone https://github.com/pi-top/pi-topOS-Apt-Source.git
 cd pi-topOS-Apt-Source
 # Copy keys
 sudo cp keys/* /usr/share/keyrings/
-# Copy pi-top-os source
-sudo cp sources/pi-top-os.list /etc/apt/sources.list.d/
+# Install source by executing the 'pi-top-os-apt-source-manager' script with the repository name
+sudo usr/lib/pi-top-os-apt-installer/pi-top-apt-source-manager install pi-top-os
 # Update apt
 sudo apt update
 ```
