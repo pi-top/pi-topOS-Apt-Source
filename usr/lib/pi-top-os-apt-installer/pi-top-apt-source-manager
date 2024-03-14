@@ -35,6 +35,9 @@ main() {
     fi
     
     DISTRO="$(lsb_release -cs 2>/dev/null)"
+    if [ -z "${DISTRO}" ] && [ -f /etc/os-release ]; then
+        DISTRO="$(cat /etc/os-release | grep VERSION_CODENAME | cut -d'=' -f2)"
+    fi
     if [ -z "${DISTRO}" ] || [[ ! " ${VALID_DISTROS[@]} " =~ " ${DISTRO} " ]]; then
         echo "Unsupported distro: ${DISTRO} (supported: ${VALID_DISTROS[@]})"
         exit 1
