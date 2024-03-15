@@ -1,3 +1,9 @@
+pi-top-os-apt (2024.3.9) bullseye; urgency=medium
+
+  * Use os-release to determine OS distribution
+
+ -- pi-top <deb-maintainers@pi-top.com>  Thu, 14 Mar 2024 19:24:22 +0000
+
 pi-top-os-apt (2024.3.8) bullseye; urgency=medium
 
   * Install source for host machine distro (#17)
