@@ -1,3 +1,9 @@
+pi-top-os-apt (2024.3.28) bullseye; urgency=medium
+
+  * Include all generated files in release artifacts
+
+ -- pi-top <deb-maintainers@pi-top.com>  Thu, 28 Mar 2024 15:39:59 +0000
+
 pi-top-os-apt (2024.3.9) bullseye; urgency=medium
 
   * Use os-release to determine OS distribution
