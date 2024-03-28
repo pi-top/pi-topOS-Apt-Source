@@ -1,4 +1,4 @@
-pi-top-os-apt (2024.3.10) bullseye; urgency=medium
+pi-top-os-apt (2024.3.28) bullseye; urgency=medium
 
   * Include all generated files in release artifacts
 
