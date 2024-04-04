@@ -21,7 +21,7 @@ More information about using pi-top hardware with Raspberry Pi-OS can be found [
 
 ## Manually
 
-You can also manually add the source you want by cloning this repository and copying the files into your system.
+You can also manually add the source you want by cloning this repository, copying the required keys and running the install script.
 
 ```
 # Clone repository
