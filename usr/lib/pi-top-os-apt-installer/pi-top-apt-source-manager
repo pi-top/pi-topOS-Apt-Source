@@ -14,7 +14,7 @@ do_install() {
     if [ "${REPO}" = "experimental" ]; then
         KEYRING_FILE="pi-top-os-experimental.gpg"
     fi
-    KEYRING_FILE="/usr/share/keyrings/${KEYRING_FILE}"
+    KEYRING_FILE="/usr/share/keyrings/${KEYRING_FILE},/usr/share/keyrings/pi-top-os-backup.gpg"
 
     mkdir -p "${BASE_FOLDER}"
     echo "deb [signed-by=${KEYRING_FILE}] https://packages.pi-top.com/${REPO}/debian/ ${DISTRO} main" > "${OUTPUT_REPO_FILE}"
