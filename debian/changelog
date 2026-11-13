@@ -1,3 +1,16 @@
+pi-top-os-apt (2026.11.13) bookworm; urgency=medium
+
+  * Updated master workflow files
+  * Updated master workflow files
+  * Updated master workflow files
+  * Updated master workflow files
+  * Regenerate Debian workflows: drop bullseye, move off the dead runner (#25)
+  * Create releases with the workflow's own token (#26)
+  * Version releases by date (#28)
+  * Allow running the changelog bump by hand (#29)
+
+ -- pi-top <deb-maintainers@pi-top.com>  Fri, 13 Nov 2026 14:15:08 +0000
+
 pi-top-os-apt (2024.4.4) bullseye; urgency=medium
 
   * Update readme
