@@ -1,3 +1,10 @@
+pi-top-os-apt (2026.11.16) bookworm; urgency=medium
+
+  * Drop bullseye from supported distros (#27)
+  * Don't break dpkg on an unsupported Debian release (#31)
+
+ -- pi-top <deb-maintainers@pi-top.com>  Mon, 16 Nov 2026 15:46:26 +0000
+
 pi-top-os-apt (2026.11.13) bookworm; urgency=medium
 
   * Updated master workflow files
