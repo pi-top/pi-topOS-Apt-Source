@@ -7,6 +7,8 @@ set -euo pipefail
 IFS=$'\n\t'
 ###############################################################
 
-/usr/lib/pi-top-os-apt-installer/pi-top-apt-source-manager install pi-top-os-unstable
+if ! /usr/lib/pi-top-os-apt-installer/pi-top-apt-source-manager install pi-top-os-unstable; then
+    echo "Leaving the pi-top-os-unstable apt source unchanged" >&2
+fi
 
 #DEBHELPER#

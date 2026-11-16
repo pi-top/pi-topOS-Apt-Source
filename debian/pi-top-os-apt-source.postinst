@@ -7,6 +7,8 @@ set -euo pipefail
 IFS=$'\n\t'
 ###############################################################
 
-/usr/lib/pi-top-os-apt-installer/pi-top-apt-source-manager install pi-top-os
+if ! /usr/lib/pi-top-os-apt-installer/pi-top-apt-source-manager install pi-top-os; then
+    echo "Leaving the pi-top-os apt source unchanged" >&2
+fi
 
 #DEBHELPER#

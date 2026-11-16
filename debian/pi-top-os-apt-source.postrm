@@ -8,12 +8,16 @@ IFS=$'\n\t'
 ###############################################################
 
 SOURCE_NAME="pi-top-os"
-if [[ -f /usr/lib/pi-top-os-apt-installer/pi-top-apt-source-manager ]]; then
-    /usr/lib/pi-top-os-apt-installer/pi-top-apt-source-manager remove "$SOURCE_NAME"
-elif [[ -f "/etc/apt/sources.list.d/$SOURCE_NAME.list" ]]; then
-    rm -f "/etc/apt/sources.list.d/$SOURCE_NAME.list"
-else
-    echo "source $SOURCE_NAME not found, skipping"
-fi
+case "${1:-}" in
+remove | purge)
+    if [[ -f /usr/lib/pi-top-os-apt-installer/pi-top-apt-source-manager ]]; then
+        /usr/lib/pi-top-os-apt-installer/pi-top-apt-source-manager remove "$SOURCE_NAME"
+    elif [[ -f "/etc/apt/sources.list.d/$SOURCE_NAME.list" ]]; then
+        rm -f "/etc/apt/sources.list.d/$SOURCE_NAME.list"
+    else
+        echo "source $SOURCE_NAME not found, skipping"
+    fi
+    ;;
+esac
 
 #DEBHELPER#

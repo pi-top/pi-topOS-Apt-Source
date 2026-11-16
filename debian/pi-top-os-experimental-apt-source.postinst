@@ -7,6 +7,8 @@ set -euo pipefail
 IFS=$'\n\t'
 ###############################################################
 
-/usr/lib/pi-top-os-apt-installer/pi-top-apt-source-manager install experimental
+if ! /usr/lib/pi-top-os-apt-installer/pi-top-apt-source-manager install experimental; then
+    echo "Leaving the experimental apt source unchanged" >&2
+fi
 
 #DEBHELPER#
